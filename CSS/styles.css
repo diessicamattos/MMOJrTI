@@ -12,7 +12,7 @@
     --main-font: 'rajdhani';
     --fonte-android: 'Android', cursive;
 }
-
+ 
 
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap');
 
@@ -22,7 +22,7 @@
 }
 
 *{
-    font-family: var(--fonte-android);
+    font-family: var(--fonte-android); 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -31,13 +31,10 @@
     overflow: hidden;
 }
 
-
 section,
 footer {
     padding: 54px 0;
 }
-
-
 
 .container{
     margin: 0 auto;
@@ -48,7 +45,7 @@ footer {
     background-image: url(../IMAGENS/tela-5.png);
     overflow: hidden;
     background-size: 60vw;
-  background-repeat: no-repeat;
+    background-repeat: no-repeat;
 }
 
 header{
@@ -62,7 +59,14 @@ a{
     font-size: 30px;
     padding: 20px;
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: var(--fonte-android);
+}
+
+body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: block;
 }
 
 ul a:hover{
@@ -72,21 +76,17 @@ ul a:hover{
     color: var(--cor7);
 }
 
-
 .logo-img{
     filter: drop-shadow(1px 1px 15px var(--cor7));
     width: 100px;
     height: 150px;
     margin-left: 10px;
-    padding: 0;
     transition: transform 300ms; /* Aplica a transição */
 }
 
 .logo-img:hover {
     transform: scale(1.1) rotate(2deg); /* Aplica a escala e rotação no hover */
   }
-
-
 
 nav{
     display: flex;
@@ -131,8 +131,6 @@ nav ul a {
     transition: 0.4s;
 }*/
 
-
-
 .banner{
     display: flex;
     justify-content: center;
@@ -152,7 +150,6 @@ nav ul a {
     font-family: var(--fonte-android)
 }
 
-
 h1{
     font-size: 90px;
     font-family: var(--fonte-android);
@@ -160,7 +157,6 @@ h1{
     position: relative;
     color: white;
 }
-
 
 .banner .banner-text h3{
     font-size: 40px;

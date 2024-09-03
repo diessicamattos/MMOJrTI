@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+:root{
+    --cor1: #1a1e29;
+    --cor2: #132d46;
+    --cor3: #01c38e;
+    --cor4:#ffffff;
+    --cor5:#FA8334;
+    --cor6:#FFFD77;
+    --cor7: #1DD3B0;
+
+    --main-font: 'rajdhani';
+    --fonte-android: 'Android', cursive;
+}
+ 
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap');
+
+@font-face {
+    font-family: android;
+    src: url(../fontes/idroid.otf) format(opentype)
+}
+
+
+*{
+    font-family: var(--fonte-android); 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    overflow: hidden;
+}
+
+header{
+   /* background-color: #132d46;*/
+    background: linear-gradient(to top, var(--cor1), var(--cor2));
+    text-align: center;
+    padding: 40px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+    /*background-color: #132d46;*/
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav ul a {
+    color: var(--cor4);
+    margin: 0 25px;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: block;
+}
+
+a{
+    color: var(--cor4);
+    display: flex;
+    align-items: center;
+}
+
+ul a:hover{
+    background: #ffffff30;
+    border-radius: 20px;
+    transition: 0.2s;
+    color: var(--cor7);
+    padding: 20px;
+    transition: 0.5s
+}
+
+h1{
+    color: var(--cor4);
+    align-items: center;
+}
+
+p{
+    color: var(--cor4);
+    display: block;
+    align-items: center;
+}
