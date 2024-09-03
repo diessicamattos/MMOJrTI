@@ -39,6 +39,16 @@ header{
     padding: 40px;
 }
 
+.logo-Esi{
+    filter: drop-shadow(1px 1px 15px var(--cor7));
+    transition: transform 300ms;
+    width: 75px;
+}
+
+.logo-Esi:hover {
+    transform: scale(1.1) rotate(2deg); /* Aplica a escala e rotação no hover */
+  }
+
 nav{
     display: flex;
     align-items: center;
