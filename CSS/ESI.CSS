@@ -102,7 +102,7 @@ p{
 
 main{
     height: 100vh;
-    background-color: var(--cor1);
+    background-color: var(--cor4);
     opacity: 0.8;
     position: relative; /* Necessário para que a posição absoluta da trilho funcione em relação ao body */
 }
@@ -110,7 +110,7 @@ main{
 .trilho{
     width: 60px;
     height: 25px;
-    background-color: #4d4d4d;
+    background-color: #c3c3c3;
     border-radius: 150px;
     position: absolute;
     top: 10px; /* Distância do topo da tela */
@@ -121,7 +121,7 @@ main{
 .trilho .indicador{
     width: 25px;
     height: 25px;
-    background-color: #000;
+    background-color: var(--cor4);
     border-radius: 50%;
     transform: scale(.9);
     position: absolute;
@@ -130,16 +130,16 @@ main{
 }
 
 .trilho.dark{
-    background-color: #c3c3c3;
+    background-color: #4d4d4d;
 }
 
 .trilho.dark .indicador{
     left: 35px;
-    background-color: white;
+    background-color: black;
 }
 
 main.dark{
-    background-color: #e4e4e4;
+    background-color: var(--cor1);
 }
 
 header.dark{
