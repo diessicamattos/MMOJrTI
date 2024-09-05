@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'outfit', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: #212121;
+    position: relative; /* Necessário para que a posição absoluta da trilho funcione em relação ao body */
+}
+
+h1{
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px; /* Ajuste conforme necessário */
+}
+
+.trilho{
+    width: 60px;
+    height: 25px;
+    background-color: #4d4d4d;
+    border-radius: 150px;
+    position: absolute;
+    top: 10px; /* Distância do topo da tela */
+    right: 10px; /* Posiciona a trilho no canto superior direito */
+    cursor: pointer;
+}
+
+.trilho .indicador{
+    width: 25px;
+    height: 25px;
+    background-color: #000;
+    border-radius: 50%;
+    transform: scale(.9);
+    position: absolute;
+    left: 0;
+    transition: 0.9s;
+}
+
+.trilho.dark{
+    background-color: #c3c3c3;
+}
+
+.trilho.dark .indicador{
+    left: 35px;
+    background-color: white;
+}
+
+body.dark{
+    background-color: #e4e4e4;
+}
