@@ -12,6 +12,7 @@
 
     --main-font: 'rajdhani';
     --fonte-android: 'Android', cursive;
+    --font-menu:'beat';
 }
  
 
@@ -19,9 +20,9 @@
 
 @font-face {
     font-family: android;
-    src: url(../fontes/idroid.otf) format(opentype)
-}
+    src: url(../fontes/idroid.otf) format(opentype);
 
+}
 
 *{
     font-family: var(--fonte-android); 
@@ -50,11 +51,13 @@ header{
     transform: scale(1.1) rotate(2deg); /* Aplica a escala e rotação no hover */
   }
 
+
+
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 5px;
+    padding-top: 3px;
     
     /*background-color: #132d46;*/
 }
@@ -66,9 +69,9 @@ nav ul{
 
 nav ul a {
     color: var(--cor4);
-    margin: 0 25px;
+    margin: 0 20px;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 14px;
     display: block;
 }
 
@@ -90,6 +93,8 @@ ul a:hover{
 h1{
     color: var(--cor4);
     align-items: center;
+    font-size: 50px;
+    font-family: var(--fonte-android);
 }
 
 p{
@@ -144,7 +149,48 @@ main.dark{
 
 header.dark{
     background-color: #01c38e;
+    padding: 20px;
 }
 
 /*ativação modo dark*/
+
+
+.bottom-hover nav ul li a{
+    display: block;
+}
+
+.bottom-hover nav ul li a:hover{
+    background: #ffffff30;
+    border-radius: 20px;
+    transition: 0.2s;
+    color: var(--cor7);
+    padding: 20px;
+    transition: 0.5s
+}
+
+.drop-hover{
+    position: relative;
+}
+
+.drop-hover .drop{
+    position: absolute;
+    background: #ffffff30;
+    color: var(--cor7);
+    padding: 20px;
+    height: 0;
+    overflow: hidden;
+}
+
+.drop-hover .drop a{
+    padding: 20px;
+}
+
+.drop-hover:hover .drop{
+    height: 200px;
+
+}
+
+
+
+
 
