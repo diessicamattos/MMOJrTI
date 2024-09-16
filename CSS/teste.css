@@ -1,0 +1,236 @@
+@charset "UTF-8";
+
+:root {
+    --cor1: #1a1e29;
+    --cor2: #132d46;
+    --cor3: #01c38e;
+    --cor4: #ffffff;
+    --cor5: #FA8334;
+    --cor6: #FFFD77;
+    --cor7: #1DD3B0;
+
+    --main-font: 'Rajdhani';
+    --fonte-android: 'Android', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap');
+
+@font-face {
+    font-family: android;
+    src: url(../fontes/idroid.otf) format(opentype);
+}
+
+* {
+    font-family: var(--fonte-android);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    overflow: hidden;
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+}
+
+.banner-text{
+    color: white;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    padding: 0 90px;
+    background: #ffffff15;
+    backdrop-filter: blur(10px);
+    border: solid 1px #ffffff35;
+    border-radius: 20px;
+
+}
+
+
+ 
+
+.container {
+    margin: 0 auto;
+    padding: 0.5%;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url(../IMAGENS/tela-5.png);
+    overflow: hidden;
+    background-size: 60vw;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background: linear-gradient(45deg, var(--cor1), var(--cor2), var(--cor3),var(--cor5));
+    background-size: 300% 300%; 
+    animation: colors 15s ease infinite;
+}
+
+@keyframes colors {
+    0% {
+        background-position: 0% 50%; 
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50% ;
+    }
+}
+
+a {
+    color: var(--cor4);
+    font-size: 30px;
+    padding: 20px;
+    font-weight: bold;
+    font-family: var(--fonte-android);
+}
+
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+ul a:hover {
+    background: #ffffff30;
+    border-radius: 20px;
+    transition: 0.2s;
+    color: var(--cor4);
+}
+
+.logo-img {
+    filter: drop-shadow(1px 1px 15px var(--cor7));
+    width: 100px;
+    height: 150px;
+    margin-left: 10px;
+    transition: transform 300ms; /* Aplica a transição */
+}
+
+.logo-img:hover {
+    transform: scale(1.1) rotate(2deg); /* Aplica a escala e rotação no hover */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul a {
+    color: var(--cor4);
+    margin: 0 25px;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: block;
+}
+
+.nav-responsive {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--cor1);
+}
+
+.nav a, .nav-responsive a {
+    font-size: 1.2rem;
+    color: var(--cor4);
+    padding: 0.5rem 1rem;
+    transition: 0.4s;
+}
+
+.nav a:hover, .nav-responsive a:hover {
+    color: var(--cor3);
+}
+
+.nav-responsive a {
+    display: block;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.menu-hamburguer {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .menu-hamburguer {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .nav-responsive {
+        display: block;
+    }
+
+    .nav-responsive.open {
+        display: block;
+    }
+
+    .logo-img {
+        width: 80px;
+        height: 120px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .home-img, .about-img {
+        width: 80%;
+        max-width: 80%;
+    }
+
+    .banner .banner-text {
+        margin: 100px;
+        padding: 0 60px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    .banner .banner-text h3 {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    .home-img, .about-img {
+        width: 65%;
+        max-width: 65%;
+    }
+
+    .banner .banner-text {
+        margin: 150px;
+        padding: 0 90px;
+    }
+
+    h1 {
+        font-size: 90px;
+    }
+
+    .banner .banner-text h3 {
+        font-size: 40px;
+    }
+}

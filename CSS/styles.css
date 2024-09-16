@@ -1,28 +1,38 @@
 @charset "UTF-8";
 
-:root{
+:root {
     --cor1: #1a1e29;
     --cor2: #132d46;
     --cor3: #01c38e;
-    --cor4:#ffffff;
-    --cor5:#FA8334;
-    --cor6:#FFFD77;
+    --cor4: #ffffff;
+    --cor5: #FA8334;
+    --cor6: #FFFD77;
     --cor7: #1DD3B0;
+    --cor8: #90bede;
+    --cor9: #14248a;
 
-    --main-font: 'rajdhani';
+    /*cores degrade*/
+
+    --degrad1:#324376;
+    --degrad2: #586ba4;
+    ----degrad3: #44cfcb;
+    --degrad4: #f28f3b;
+
+
+
+    --main-font: 'Rajdhani';
     --fonte-android: 'Android', cursive;
 }
- 
 
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap');
 
 @font-face {
     font-family: android;
-    src: url(../fontes/idroid.otf) format(opentype)
+    src: url(../fontes/idroid.otf) format(opentype);
 }
 
-*{
-    font-family: var(--fonte-android); 
+* {
+    font-family: var(--fonte-android);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -31,52 +41,88 @@
     overflow: hidden;
 }
 
-section,
-footer {
-    padding: 54px 0;
+.banner{
+    display: flex;
+    justify-content: center;
 }
 
-.container{
+.banner-text{
+    color: white;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    padding: 0 90px;
+    background: #ffffff15;
+    backdrop-filter: blur(10px);
+    border: solid 1px #ffffff35;
+    border-radius: 20px;
+
+}
+
+
+ 
+
+.container {
     margin: 0 auto;
     padding: 0.5%;
     background-position: center;
     background-attachment: fixed;
-    background-color: var(--cor1);
     background-image: url(../IMAGENS/tela-5.png);
     overflow: hidden;
     background-size: 60vw;
     background-repeat: no-repeat;
 }
 
-header{
+header {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    background: linear-gradient(45deg, var(--degrad1), var(--degrad2), var(--cor2), var(--degrad4));
+    background-size: 300% 300%; 
+    animation: colors 15s ease infinite;
+    width: 100vw;
+    height: 100vh;
 }
 
-a{
+@keyframes colors {
+    0% {
+        background-position: 0% 50%; 
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50% ;
+    }
+}
+
+a {
     color: var(--cor4);
     font-size: 30px;
     padding: 20px;
     font-weight: bold;
     font-family: var(--fonte-android);
+
 }
 
-body{
+body {
     height: 100%;
     padding: 0;
     margin: 0;
     display: block;
 }
 
-ul a:hover{
+ul a:hover {
     background: #ffffff30;
     border-radius: 20px;
     transition: 0.2s;
-    color: var(--cor7);
+    color: var(--cor4);
 }
 
-.logo-img{
+.logo-img {
     filter: drop-shadow(1px 1px 15px var(--cor7));
     width: 100px;
     height: 150px;
@@ -86,16 +132,16 @@ ul a:hover{
 
 .logo-img:hover {
     transform: scale(1.1) rotate(2deg); /* Aplica a escala e rotação no hover */
-  }
+}
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 20px;
 }
 
-nav ul{
+nav ul {
     display: flex;
     align-items: center;
 }
@@ -108,60 +154,97 @@ nav ul a {
     display: block;
 }
 
-/*nav ul a:hover{
+.nav-responsive {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
-    background: #ffffff15;
-    border: solid 1px var(--cor4);
-    border-radius: 20px;
-    padding: 15px;
-    height: 100%;
-    width: 100%; 
-    transition: 0.6s;
-    
-}*/
+    padding: 1rem;
+    background-color: var(--cor1);
+}
 
-/*nav ul a::after{
-    content: "";
-    background-color: var(--cor3);
-    filter: drop-shadow(1px 1px 25px var(--cor7));
-    height: 3px;
-    width: 0%;
-    display: block;
-    margin: 0 auto;
+.nav a, .nav-responsive a {
+    font-size: 1.2rem;
+    color: var(--cor4);
+    padding: 0.5rem 1rem;
     transition: 0.4s;
+}
+
+.nav a:hover, .nav-responsive a:hover {
+    color: var(--cor3);
+}
+
+.nav-responsive a {
+    display: block;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.menu-hamburguer {
+    display: none;
+    cursor: pointer;
+}
+
+/*@media (max-width: 767px) {
+    .menu-hamburguer {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .nav-responsive {
+        display: block;
+    }
+
+    .nav-responsive.open {
+        display: block;
+    }
+
+    .logo-img {
+        width: 80px;
+        height: 120px;
+    }
 }*/
 
-.banner{
-    display: flex;
-    justify-content: center;
-}
+/*@media (min-width: 768px) and (max-width: 991px) {
+    .home-img, .about-img {
+        width: 80%;
+        max-width: 80%;
+    }
 
-.banner .banner-text{
-    align-items: center;
-    width: 100vw;
-    height: 100%;
-    margin: 150px;
-    text-align: center;
-    padding: 0  90px;
-    background: #ffffff15;
-    backdrop-filter: blur(10px);
-    border: solid 1px #ffffff35;
-    border-radius: 20px;
-    font-family: var(--fonte-android)
-}
+    .banner .banner-text {
+        margin: 100px;
+        padding: 0 60px;
+    }
 
-h1{
-    font-size: 90px;
-    font-family: var(--fonte-android);
-    text-align: center;
-    position: relative;
-    color: white;
-}
+    h1 {
+        font-size: 60px;
+    }
 
-.banner .banner-text h3{
-    font-size: 40px;
-    font-family: sans-serif;
-    text-align: center;
-    position: relative;
-    color: white;
-}
+    .banner .banner-text h3 {
+        font-size: 30px;
+    }
+}*/
+
+/*@media (min-width: 992px) {
+    .home-img, .about-img {
+        width: 65%;
+        max-width: 65%;
+    }*/
+
+    .banner .banner-text {
+        margin: 150px;
+        padding: 0 90px;
+    }
+
+    h1 {
+        font-size: 90px;
+    }
+
+    .banner .banner-text h3 {
+        font-size: 40px;
+    }
+
