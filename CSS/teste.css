@@ -1,0 +1,192 @@
+@charset "UTF-8";
+
+:root{
+    --cor1: #1a1e29;
+    --cor2: #132d46;
+    --cor3: #01c38e;
+    --cor4:#ffffff;
+    --cor5:#FA8334;
+    --cor6:#FFFD77;
+    --cor7: #1DD3B0;
+    
+
+    --main-font: 'rajdhani';
+    --fonte-android: 'Android', cursive;
+    --font-menu:'beat';
+}
+ 
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap');
+
+@font-face {
+    font-family: android;
+    src: url(../fontes/idroid.otf) format(opentype);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background:var(--cor1) repeat scroll 0 0;
+    height: 100vh;
+    overflow: hidden;
+    color: #fff;
+}
+
+.container h1{
+    font-family: var(--fonte-android);
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: azonix;    
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    font-size: 80px;
+    text-align: center;
+}
+
+
+.container h3{
+    font-family: var(--fonte-android);
+    color: #fff;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    font-family: azonix;    
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    font-size: 50px;
+    text-align: center;
+}
+
+.box ul li{
+    position: absolute;
+    width: 45px;
+    height: 50px;
+    list-style: none;
+    opacity: 0;
+    background: radial-gradient(var(--cor3), transparent, transparent);
+    bottom:0;
+    left: 15vh;
+    animation: animate 5s linear infinite;
+}
+
+.box ul li:nth-child(2){
+    left: 37vw;
+    animation-delay: 2s;
+}
+
+.box ul li:nth-child(3){
+    left: 25vw;
+    animation-delay: 2s;
+}
+    
+.box ul li:nth-child(4){
+    left: 60vw;
+    animation-delay: 4s;
+}
+
+.box ul li:nth-child(5){
+    left: 75vw;
+    animation-delay: 2s;
+}
+
+.box ul li:nth-child(6){
+    left: 90vw;
+    animation-delay: 4s;
+}
+
+.box ul li:nth-child(7){
+    left: 60vw;
+    animation-delay: 4s;
+}
+
+.box ul li:nth-child(8){
+    left: 50vw;
+    animation-delay: 3s;
+}
+
+.box ul li:nth-child(9){
+    left: 45vw;
+    animation-delay: 7s;
+}
+
+
+@keyframes animate{
+    0%{
+        transform: scale(0);
+        opacity: 1;
+        bottom: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+        bottom: 100vh;
+    }
+
+ 
+}
+
+/*LOGO*/
+
+.logo-Esi {
+    position: absolute;
+    top: 40px; /* Ajuste para controlar a distância do topo */
+    left: 15px; /* Ajuste para controlar a distância da esquerda */
+    width: 60px; /* Ajuste o tamanho da imagem, se necessário */
+}
+
+
+
+.logo-Esi{
+    filter: drop-shadow(1px 1px 15px var(--cor7));
+    transition: transform 300ms;
+    width: 75px;
+}
+
+.logo-Esi:hover {
+    transform: scale(1.1) rotate(2deg); /* Aplica a escala e rotação no hover */
+  }
+
+/*FIM LOGO*/  
+
+
+ /*MENU*/
+
+ nav {
+    font-family: var(--fonte-android);
+    position: fixed;
+    top: 15px;
+    right: 0; 
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+   /* background: #ffffff15;
+    backdrop-filter: blur(10px);
+    border: solid 1px #ffffff35;*/
+    z-index: 1000; 
+    
+} 
+
+nav a {
+    display: inline-block;
+    color: var(--cor4);
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav ul a:hover {
+    background: var(--cor3);
+    border-radius: 10px;
+    color: var(--cor1);
+    transition: 0.2s;
+} 
+
+/*FIM MENU*/

@@ -157,6 +157,7 @@ nav {
     backdrop-filter: blur(10px);
     border: solid 1px #ffffff35;
     z-index: 1000; 
+    
 }
 
 nav li {
@@ -174,6 +175,7 @@ nav li a:hover {
     background: #3e343430;
     border-radius: 10px;
     color: var(--cor4);
+    transition:0.4s;
 }
 
 /* Estilização do submenu */
@@ -188,6 +190,8 @@ nav li a:hover {
     z-index: 1001; /* Coloca o submenu acima de outros elementos */
 }
 
+ 
+
 /* Links dentro do submenu */
 .dropdown-menu a {
     display: block;
@@ -197,8 +201,10 @@ nav li a:hover {
 }
 
 .dropdown-menu a:hover {
-    background-color: var(--cor3); /* Cor de hover nos itens do submenu */
+    background-color: var(--cor7); /* Cor de hover nos itens do submenu */
     border-radius: 5px;
+    color: var(--cor2);
+    transition:0.4s;
 }
 
 /* Mostrar o submenu ao passar o mouse */
