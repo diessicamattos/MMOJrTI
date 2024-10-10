@@ -7,7 +7,7 @@
     --cor4:#ffffff;
     --cor5:#FA8334;
     --cor6:#FFFD77;
-    --cor7: #1DD3B0;
+    --cor7: #00eeff;
     
 
     --main-font: 'rajdhani';
@@ -29,16 +29,21 @@
     padding: 0;
 }
 
+span{
+    color: var(--cor7);
+}
+
 .container{
     background:var(--cor1) repeat scroll 0 0;
     height: 100vh;
     overflow: hidden;
     color: #fff;
+    
 }
 
 .container h1{
     font-family: var(--fonte-android);
-    color: #fff;
+    color: var(--cor7);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -69,7 +74,7 @@
     height: 50px;
     list-style: none;
     opacity: 0;
-    background: radial-gradient(var(--cor3), transparent, transparent);
+    background: radial-gradient(var(--cor7), transparent, transparent);
     bottom:0;
     left: 15vh;
     animation: animate 5s linear infinite;
@@ -183,10 +188,12 @@ nav a {
 }
 
 nav ul a:hover {
-    background: var(--cor3);
+    background: var(--cor7);
     border-radius: 10px;
     color: var(--cor1);
     transition: 0.2s;
 } 
 
 /*FIM MENU*/
+
+

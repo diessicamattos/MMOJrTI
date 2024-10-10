@@ -7,7 +7,7 @@
     --cor4:#ffffff;
     --cor5:#FA8334;
     --cor6:#FFFD77;
-    --cor7: #1DD3B0;
+    --cor7: #00eeff;
     
 
     --main-font: 'rajdhani';
@@ -72,7 +72,6 @@ p{
 main{
     height: 100vh;
     background-color: var(--cor4);
-    opacity: 0.8;
     position: relative; /* Necessário para que a posição absoluta da trilho funcione em relação ao body */
 }
 
