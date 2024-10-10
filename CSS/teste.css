@@ -34,7 +34,7 @@ span{
 }
 
 .container{
-    background:var(--cor1) repeat scroll 0 0;
+    background: linear-gradient(45deg, var(--cor1), var(--cor2));
     height: 100vh;
     overflow: hidden;
     color: #fff;
@@ -47,7 +47,6 @@ span{
     position: absolute;
     top: 50%;
     left: 50%;
-    font-family: azonix;    
     transform: translate(-50%,-50%);
     z-index: 1;
     font-size: 80px;
