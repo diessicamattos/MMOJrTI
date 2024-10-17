@@ -139,7 +139,7 @@ span{
 
 .logo-Esi {
     position: absolute;
-    top: 40px; /* Ajuste para controlar a distância do topo */
+    top: 0px; /* Ajuste para controlar a distância do topo */
     left: 15px; /* Ajuste para controlar a distância da esquerda */
     width: 60px; /* Ajuste o tamanho da imagem, se necessário */
 }
