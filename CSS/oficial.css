@@ -48,7 +48,7 @@ header{
 
  }
  
- h1{
+ .text-principal h1{
     color: var(--cor4);
     align-items: center;
     font-size: 60px;
@@ -58,7 +58,7 @@ header{
     text-shadow: 1px 2px var(--cor2);
 }
 
-p{
+.text-principal h3{
     font-family: var(--fonte-android);
     color: var(--cor4);
     display: block;
@@ -73,7 +73,23 @@ main{
     height: 100vh;
     background-color: var(--cor4);
     position: relative; /* Necessário para que a posição absoluta da trilho funcione em relação ao body */
+    align-items: center;
+    text-align: center;
 }
+
+main .INSTANCES .content {
+    display: flex;
+    align-items: flex-start; /* Alinha os itens no topo */
+    gap: 20px; /* Espaçamento entre os itens */
+    margin-top: 100px; /* Distância do topo da tela */
+    
+}
+
+main .INSTANCES img {
+    margin-right: 100px; /* Espaçamento entre a imagem e o texto */
+    max-width: 550px; /* Ajusta a largura da imagem se necessário */
+}
+
 
 .trilho{
     width: 60px;
@@ -108,8 +124,10 @@ main{
 
 main.dark{
     background-color: var(--cor2);
+    color: var(--cor4);
     
 }
+
 
 header.dark{
     background-color: #01c38e;
