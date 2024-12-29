@@ -7,5 +7,11 @@ trilho.addEventListener('click', ()=>{
     trilho.classList.toggle('dark')
     main.classList.toggle('dark')
     header.classList.toggle('dark')
-})
+
+    
+});
+
+
+
+
 

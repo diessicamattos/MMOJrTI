@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 :root{
     --cor1: #1a1e29;
     --cor2: #132d46;
@@ -159,6 +160,7 @@ header.dark{
   /*Menu*/
 
 /* Configurações do menu */
+/* Configurações do menu */
 nav {
     font-family: var(--fonte-android);
     position: fixed;
@@ -169,17 +171,16 @@ nav {
     box-sizing: border-box;
     display: flex;
     justify-content: flex-end;
-    padding: 15px;
     background: #ffffff15;
     backdrop-filter: blur(10px);
     border: solid 1px #ffffff35;
     z-index: 1000; 
-    
 }
 
 nav li {
+    right: 40px; 
     display: inline-block;
-    position: relative; /* Adicione position: relative para os itens de menu que possuem dropdown */
+    position: relative; /* Necessário para os itens de menu com dropdown */
 }
 
 nav li a {
@@ -197,17 +198,35 @@ nav li a:hover {
 
 /* Estilização do submenu */
 .dropdown-menu {
-    position: absolute;
-    display: none;
-    top: 100%; /* Certifica que o menu dropdown seja exibido abaixo do item do menu */
-    left: 0;
-    background-color: var(--cor2); /* Ajuste a cor do fundo do submenu conforme necessário */
-    padding: 10px;
-    border-radius: 5px;
-    z-index: 1001; /* Coloca o submenu acima de outros elementos */
+    
+    display: none; /* Escondendo o menu por padrão */
+    position: absolute; /* Posicionando o menu em relação ao item pai */
+    top: 100%; /* Fazendo o menu aparecer logo abaixo do dropdown */
+    left: 0; /* Alinha o menu à esquerda do item pai */
+    min-width: 160px; /* Defina a largura mínima do menu */
+    padding: 10px 0; /* Adiciona algum espaço interno */
+    background-color: var(--cor2); /* Cor de fundo do menu */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombras para o menu */
+    z-index: 1; /* Garante que o menu fique acima de outros elementos */
+    overflow: hidden; /* Garante que o conteúdo do menu não ultrapasse os limites do item pai */
+    left: 0; /* Alinha o menu à esquerda do item pai */
+    /* Adicionando cálculo para garantir que o submenu não ultrapasse a tela */
+    max-width: calc(100vw - 20px); /* Garante que o submenu não ultrapasse a tela */
 }
 
- 
+/* Mostrar o submenu ao passar o mouse */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Exibe o menu ao passar o mouse sobre o dropdown */
+}
+
+@media (max-width: 768px) {
+    .dropdown-menu {
+        left: auto; /* Ajuste automático do lado esquerdo */
+        right: 0; /* Força o alinhamento para o lado direito da tela */
+        top: 100%; /* Garantir que o submenu continue abaixo */
+        max-width: 100%; /* Garante que o submenu não ultrapasse a largura da tela */
+    }
+}
 
 /* Links dentro do submenu */
 .dropdown-menu a {
@@ -217,14 +236,80 @@ nav li a:hover {
     white-space: nowrap; /* Evita que os links quebrem linha */
 }
 
+.dropdown {
+    position: relative; /* Necessário para que o menu se posicione em relação ao item pai */
+    display: inline-block; /* Para garantir que os itens se alinhem lado a lado */
+}
+
+/* Estilo de hover para links dentro do submenu */
 .dropdown-menu a:hover {
     background-color: var(--cor7); /* Cor de hover nos itens do submenu */
     border-radius: 5px;
     color: var(--cor2);
-    transition:0.4s;
+    transition: 0.4s;
 }
 
-/* Mostrar o submenu ao passar o mouse */
-.dropdown:hover .dropdown-menu {
-    display: block;
+
+.principal{
+    position: relative;
+    border-radius: 0.6rem;
+    box-shadow: 0 0 0.6rem var(--bg-color-01);
+    overflow: hidden;
+    display: flex;
+}
+
+.principal img{
+    width: 700px;
+    transition: 0.5s;
+    border-radius: 15px;
+}
+
+.principal img:hover{
+    transform: scale(1.1);
+}
+
+.principal .principal-box{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, var(--cor7));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(30rem);
+    transition: 0.5s ease;
+}
+
+.principal:hover .principal-box{
+    transform: translateY(0);
+}
+
+.principal-box h4{
+    font-size: 1.8rem;
+
+}
+
+.principal-box a{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: var(--text-color);
+    border-radius: 50%;
+    
+}
+
+.principal-box a i{
+    font-size: 1.2rem;
+    color: var(--cor7);
+}
+
+.principal-box p{
+    margin: 0.2rem 0 0.5rem;
 }
