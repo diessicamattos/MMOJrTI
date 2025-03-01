@@ -1,0 +1,192 @@
+/* Definindo as variáveis de cores e fontes */
+:root {
+    --cor1: #1a1e29;
+    --cor2: #132d46;
+    --cor3: #01c38e;
+    --cor4: #ffffff;
+    --cor5: #FA8334;
+    --cor6: #FFFD77;
+    --cor7: #00eeff;
+
+    --main-font: 'Rajdhani', sans-serif;
+    --fonte-android: 'Android', cursive;
+    --font-menu: 'Beat', sans-serif;
+}
+
+/* Resetando estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--main-font);
+    background-color: var(--cor1);
+    color: var(--cor4);
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--cor2);
+    padding: 20px;
+}
+
+.logo-container img {
+    width: 60px;
+}
+
+nav {
+    font-family: var(--font-menu);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--cor4);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--cor3);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--cor2);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.text-principal {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.text-principal h1 {
+    font-size: 3rem;
+    color: var(--cor3);
+}
+
+.text-principal h3 {
+    font-size: 1.5rem;
+    color: var(--cor4);
+}
+
+main {
+    padding: 40px 20px;
+}
+
+/* Seções */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--cor3);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--cor6);
+}
+
+.content {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.content img {
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+ul li {
+    margin: 8px 0;
+    font-size: 1.2rem;
+}
+
+ul li::before {
+    content: '✔️';
+    margin-right: 10px;
+    color: var(--cor5);
+}
+
+footer {
+    background-color: var(--cor2);
+    color: var(--cor4);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+footer h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Modo dark - Trilho */
+.trilho {
+    width: 50px;
+    height: 25px;
+    background-color: var(--cor5);
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.trilho .indicador {
+    width: 25px;
+    height: 25px;
+    background-color: var(--cor4);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+}
+
+#trilho:checked .indicador {
+    left: 25px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+}
+ 
