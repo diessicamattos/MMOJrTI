@@ -163,9 +163,9 @@ header.dark{
 /* Configurações do menu */
 nav {
     font-family: var(--fonte-android);
-    position: fixed;
+    position: absolute; /* Em vez de fixed */
     top: 0;
-    right: 0; 
+    right: 0;
     padding: 10px 20px;
     width: 100%;
     box-sizing: border-box;
@@ -176,6 +176,7 @@ nav {
     border: solid 1px #ffffff35;
     z-index: 1000; 
 }
+
 
 nav li {
     right: 40px; 
