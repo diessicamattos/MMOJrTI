@@ -25,6 +25,8 @@
 
 <!--/Trilho modo dark-->
 
+<!--Inicio Menu-->
+
         <nav> 
 
             <ul>
@@ -91,7 +93,7 @@
             
             
         </nav>
-
+<!--Fim Menu-->
         
 
         <div class="text-principal">
@@ -103,14 +105,14 @@
 
 </header>
 
-    <!-- inicio Conteudo principal-->
+<!-- início Conteúdo principal -->
 <main>
 
-    <div class="INSTANCES">
-        <h1>EXECUTE SCOPE INSTANCES</h1>
-        <h2>Last Version 9.x.x</h2>
-        <div class="content">
-            <img src="IMAGENS/ESI.jpg" alt="esi">
+    <div class="INSTANCES content">
+        <img src="IMAGENS/ESI.jpg" alt="esi">
+        <div class="text">
+            <h1>EXECUTE SCOPE INSTANCES</h1>
+            <h2>Last Version 9.x.x</h2>
             <p>
                 ESI is a new and simple way of Object Oriented Programming. <br>
                 Even for those who still don't know the Concepts and Principles of Object Orientation, they will learn easily. <br>
@@ -119,85 +121,88 @@
             </p>
         </div>
     </div>
-    
 
-<div class="Framework">
-    <h1>ESI Framework</h1>
-    <img src="IMAGENS/ESIFramework.jpg" alt="">
+    <div class="Framework content">
+        <img src="IMAGENS/ESIFramework.jpg" alt="ESI Framework">
+        <div class="text">
+            <h1>ESI Framework</h1>
+            <p>5 Principles S.O.L.I.D.</p>
+            <ul>
+                <li>S — Single Responsibility Principle</li>
+                <li>O — Open-Closed Principle</li>
+                <li>L — Liskov Substitution Principle</li>
+                <li>I — Interface Segregation Principle</li>
+                <li>D — Dependency Inversion Principle</li>
+            </ul>
+            <ul>
+                <li>Object Oriented Program</li>
+                <li>Clean Code</li>
+                <li>Program Without IFs</li>
+                <li>Program Without Try Catch</li>
+                <li>Fully Structured and Uncoupled Program</li>
+            </ul>
+        </div>
+    </div>
 
-  <p>5 Principles S. O. L. I. D.</p>
+    <div class="Structure content">
+        <img src="IMAGENS/ESIStructure.jpg" alt="ESI Structure">
+        <div class="text">
+            <h1>ESI Structure</h1>
+            <h2>ESI is Composed of 3 Basic Structures:</h2>
+            <ul>
+                <li>ESIControllerBase<TData> - must implement the Method protected abstract void OnExecute(IESIConfigurationController configuration);</li>
+                <li>ESIBusinessBase<TData> - must implement the Method protected abstract void OnExecute(IESIConfigurationBusiness configuration);</li>
+                <li>ESIRepositoryBase<TData> - must implement the Method protected abstract void OnExecute(IESIConfigurationRepository configuration);</li>
+            </ul>
+        </div>
+    </div>
 
-  <ul>
-
-    <li>S — Single Responsiblity Principle</li>
-    <li>O — Open-Closed Principle</li>
-    <li>L — Liskov Substitution Principle</li>
-    <li>I — Interface Segregation Principle</li>
-    <li>D — Dependency Inversion Principle</li>
-
-  </ul>
-
-  <ul>
-    <li>Object Oriented Program</li>
-    <li>Clean Code</li>
-    <li>Program Without IFs</li>
-    <li>Program Without Try Catch</li>
-    <li>Fully Structured and Uncoupled Program</li>
-  </ul>
-
-</div>
-
-<div class="Structure">
-    <h1>ESI Structure</h1>
-    <h2>ESI is Composed of 3 Basic Structures:</h2>
-    <img src="IMAGENS/ESIStructure.jpg" alt="">
-
-    <!--Adicionar os links-->
-
-    <ul>
-        <li>ESIControllerBase<TData> - must implement the Method protected abstract void OnExecute(IESIConfigurationController configuration);</li>
-        <li>ESIBusinessBase<TData> - must implement the Method protected abstract void OnExecute(IESIConfigurationBusiness configuration);</li>
-        <li>ESIRepositoryBase<TData> - must implement the Method protected abstract void OnExecute(IESIConfigurationRepository configuration);</li>
-    </ul>
-   
-</div>
-
+    <!-- Seção Flow com links para os modais -->
 <div class="flow">
-    <h1>ESI Flow</h1>
-    <img src="IMAGENS/ESIController.jpg" alt="">
-    <img src="IMAGENS/ESIBusiness.jpg" alt="">
-    <img src="IMAGENS/ESIRepository.jpg" alt="">
+    <a href="#modal1"><img src="IMAGENS/ESIController.jpg" alt="ESI Controller" id="img1"></a>
+    <a href="#modal2"><img src="IMAGENS/ESIBusiness.jpg" alt="ESI Business" id="img2"></a>
+    <a href="#modal3"><img src="IMAGENS/ESIRepository.jpg" alt="ESI Repository" id="img3"></a>
 </div>
 
-
-<div class="Attributes">
-    <h1>ESI Flow</h1>
-    <p>ESI contemplates 2 types of Transactions</p>
-    <ul>
-        <li>Distributed with Transaction Scope in System.Transactions;</li>
-        <li>Local with Transaction of Own Connection in System.Data.</li>
-    </ul>
-
-    <!--Adicionar os links-->
-    <p>ESI makes Transactions available through the Attributes: </p>
-    <ul>
-        <li>ESITransactionScope</li>
-        <li>ESITransactionLocal</li>
-    </ul>
+<!-- Modal para ampliar as imagens -->
+<div class="modal" id="modal1">
+    <a href="#" class="close">&times;</a>
+    <img src="IMAGENS/ESIController.jpg" alt="ESI Controller">
 </div>
 
-<footer>
-    <h1>ESI Support</h1>
-    <p>For more information about ESI, contact EMail: support@mmojrti.com</p>
-</footer>
+<div class="modal" id="modal2">
+    <a href="#" class="close">&times;</a>
+    <img src="IMAGENS/ESIBusiness.jpg" alt="ESI Business">
+</div>
+
+<div class="modal" id="modal3">
+    <a href="#" class="close">&times;</a>
+    <img src="IMAGENS/ESIRepository.jpg" alt="ESI Repository">
+</div>
+
+    <div class="Attributes content">
+        <img src="IMAGENS/" alt="ESI Transactions">
+        <div class="text">
+            <h1>ESI Transactions</h1>
+            <p>ESI contemplates 2 types of Transactions:</p>
+            <ul>
+                <li>Distributed with Transaction Scope in System.Transactions;</li>
+                <li>Local with Transaction of Own Connection in System.Data.</li>
+            </ul>
+            <p>ESI makes Transactions available through the Attributes:</p>
+            <ul>
+                <li>ESITransactionScope</li>
+                <li>ESITransactionLocal</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>For more information about ESI, contact EMail: support@mmojrti.com</p>
+    </footer>
 
 </main>
-
-<!-- fim Conteudo principal-->
-
-
-
-    
+<!-- fim Conteúdo principal -->
 
     <script src="main.js"></script>
 </body>
